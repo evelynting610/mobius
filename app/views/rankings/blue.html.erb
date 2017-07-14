@@ -1,0 +1,20 @@
+<h2 style = "color: blue;">Blue Transportation Reviews</h2>
+<br>
+
+<table class = "table">
+	<thead>
+		<tr>
+			<th>Rating</th>
+			<th>Review</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @blue_reviews.find_each(batch_size: 5000) do |review| %>
+		<tr>
+			<td><%= review.rating %></td>
+			<td><%= review.experiences %></td>
+		</tr>
+	<% end %>
+
+	</tbody>
+</table>

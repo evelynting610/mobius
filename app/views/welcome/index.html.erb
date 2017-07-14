@@ -1,0 +1,31 @@
+<h1>Mobius</h1>
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active">
+    <%= link_to 'Home', root_path%>
+  </li>
+
+  <li role="presentation", class = "dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">PT-1 Reviews <span class="caret"></span></a>
+
+    <ul class="dropdown-menu">
+      <li><%= link_to 'Rate a Vendor', new_review_path%></li>
+      <li class="divider"></li>
+      <li><%= link_to 'View Reviews', reviews_path%></li>
+      <li class="divider"></li>
+      <li><%= link_to 'Vendor Rankings', rankings_path%></li>
+    </ul>
+  </li>
+
+  </li>
+  <li role="presentation">
+    <%= link_to 'Forum', root_path%>
+  </li>
+  <li role="presentation">
+    <%= link_to 'Calendar', root_path%>
+  </li>
+</ul>
+
+<br><br>
+
+<p> Stunning display and info about our services</p>

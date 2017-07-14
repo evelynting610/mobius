@@ -1,0 +1,20 @@
+<h1>All PT-1 Reviews</h1>
+
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Vendor</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @reviews.find_each(batch_size: 5000) do |review|%>
+    <tr>
+      <td><%= review.vendor %></td>
+      <td><%= review.rating %></td>
+      <td><%= link_to 'Show This Review', review_path(review) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

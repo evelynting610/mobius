@@ -1,0 +1,42 @@
+<h1> New Review </h1>
+
+<%= form_for :review, url: reviews_path do |f| %>
+
+  <h4>Which PT-1 vendor did you use?</h4>
+  <p>
+    <%= f.radio_button :vendor, "blue" %>
+    <%= label :vendor_blue, "Blue Transportation" %>
+    <%= f.radio_button :vendor, "red" %>
+    <%= label :vendor_red, "Red Transportation" %>
+    <%= f.radio_button :vendor, "green" %>
+    <%= label :vendor_green, "Green Transportation" %>
+  </p>
+
+  <h4>How satisfied were you with this vendor?</h4>
+  <p>
+    <%= f.radio_button :rating, 5 %>
+    <%= label_tag :rating_5, "Very Satisfied" %>
+    <%= f.radio_button :rating, 4 %>
+    <%= label_tag :rating_4, "Satisfied" %>
+    <%= f.radio_button :rating, 3 %>
+    <%= label_tag :rating_3, "No Opinion" %>
+    <%= f.radio_button :rating, 2 %>
+    <%= label_tag :rating_2, "Dissatisfied" %>
+    <%= f.radio_button :rating, 1 %>
+    <%= label_tag :rating_1, "Very Dissatisfied" %>
+  </p>
+
+  <h4>Briefly describe your experiences with this vendor.</h4>
+  <p>
+    <%= f.text_area :experiences %>
+  </p>
+
+  <h4>How can your PT-1 improve its service?</h4>
+  <p>
+    <%= f.text_area :improvements %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

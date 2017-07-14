@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vendor: MyString
+  rating: 1
+  experiences: MyText
+  improvements: MyText
+
+two:
+  vendor: MyString
+  rating: 1
+  experiences: MyText
+  improvements: MyText
