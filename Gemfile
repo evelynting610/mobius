@@ -9,6 +9,14 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
 
+gem 'faker', '1.7.3'
+
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog',                     '1.40.0'
+gem 'will_paginate',           '3.1.5'
+gem 'bootstrap-will_paginate', '1.0.0'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '1.3.13'
 
@@ -36,7 +44,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '3.1.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -54,6 +62,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'rails-controller-testing'
+  gem 'minitest-reporters',       '1.1.14'
+  gem 'guard',                    '2.14.1'
+  gem 'guard-minitest',           '2.4.6'
 end
 
 group :production do

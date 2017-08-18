@@ -1,6 +1,7 @@
 class RankingsController < ApplicationController
 
 	def index
+		@vendors = Vendor.order(rating: :desc)
 	end
 
 	def green

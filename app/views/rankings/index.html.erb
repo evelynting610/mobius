@@ -2,7 +2,13 @@
 <h1>PT-1 Vendors Listed by Overall Rank</h1>
 
 <br><br>
+<% @vendors.each do |vendor| %>
+	<h2><%= link_to vendor.name%></h2>
+	<h4><%= vendor.rating %></h4>
+<% end %>
 
+<!--
+=begin
 <h2> <%= link_to 'Green Transportation', rankings_green_path, {style: "color: green"} %></h2>
 <p>Rating: 4.2</p>
 
@@ -11,3 +17,5 @@
 
 <h2> <%= link_to 'Blue Transportation', rankings_blue_path, {style: "color: blue"}%></h2>
 <p>Rating: 3.5</p>
+=end
+-->

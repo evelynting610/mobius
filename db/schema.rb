@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705175935) do
+ActiveRecord::Schema.define(version: 20170818213858) do
 
   create_table "reviews", force: :cascade do |t|
     t.string   "vendor"
@@ -19,6 +19,23 @@ ActiveRecord::Schema.define(version: 20170705175935) do
     t.text     "improvements"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "num_reviews"
+    t.float    "rating"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
